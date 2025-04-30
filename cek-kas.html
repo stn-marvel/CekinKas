@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Pembayaran Kas</title>
+    <link rel="stylesheet" href="kas-style.css">
+</head>
+<body>
+
+    <header class="header" id="navbar">
+        <div class="nav-logo">
+            <a href="#" class="logo" translate="no">
+                Cekin<span class="colorful">Kas</span>
+            </a>
+            <p><strong>By Bendahara 9F</strong></p>
+        </div>
+    </header>
+    
+    <section class="content" id="content">
+        <div class="container">
+            <h1>Iuran Siswa</h1>
+            <label for="absen">Masukkan Nomor Absen:</label>
+            <input type="number" id="absen" min="1" max="31" placeholder="Nomor Absen">
+            <button onclick="cekKas()">Cek Kas</button>
+            <div id="output" class="hidden">
+                <h2>Hasil:</h2>
+                <p><strong>Nama:</strong> <span id="nama"></span></p>
+                <p><strong>Jumlah Dibayar:</strong> Rp <span id="dibayar"></span></p>
+                <p><strong>Sisa:</strong> Rp <span id="harus"></span></p>
+                <p><strong>Lunas:</strong> <span id="persentase"></span>%</p>
+                <p><strong>Keterangan:</strong> <span id="keterangan"></span></p>
+            </div>
+        </div>
+    </section>
+    <section class="info" id="info">
+        <div class="information">
+            <h1 class="heading">Informasi</h1>
+            <p><strong>Khusus untuk minggu pertama sejak website ini launching:</strong><br>Data kas dicatat dan direkap di buku dan dokumen bendahara setiap hari. Tapi, data untuk website ini <strong>direkap setiap 2 hari sekali</strong>. Jadi, uang yang baru dibayar baru <strong>muncul di website ini 2 hari setelah dibayar</strong>. Nah, setelah minggu pertama, data akan diupdate di website ini setiap hari. Jadi bisa di cek waktu pulang sekolah ya.</p>
+
+
+            <h1  id="solusi" class="heading">Solusi Error</h1>
+            <p>Ga bisa lihat data karena error? Ikutin petunjuk di bawah ya. Kalau masih ga bisa, tolong infoin di WA.</p>
+            <ol>
+                <li>Jangan tambahin awalan 0, contoh: "01"</li>
+                <li>Jangan spam tombol "Cek Kas"</li>
+                <li>Jangan tambahin input apapun selain angka</li>
+                <li>Refresh halaman</li>
+            </ol>
+        </div>
+    </section>
+    <footer>
+        <p>Bantu share ke teman-teman kelas ya, biar semua tinggal cek disini.</p>
+        
+        <p>Copy Link di sini:</p>
+        <div class="url-copy">
+            <input type="text" value="https://namakamu.github.io/kas-siswa/" id="linkWebsite" readonly>
+            <button onclick="copyLink()">Salin URL</button>
+        </div>
+    </footer>
+  <script src="script.js"></script>
+</body>
+</html>
