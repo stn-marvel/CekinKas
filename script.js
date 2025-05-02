@@ -5,8 +5,8 @@ const semester2 = 120000;
 const dataKas = {
   1: { nama: "Ariana Kelita", dibayar: 135000 },
   2: { nama: "Ascendio Neo", dibayar: 20000 },
-  3: { nama: "Audrey Visiona Saputri", dibayar: 95000 },
-  4: { nama: "Bianca Camelia Kenzieta", dibayar: 120000 },
+  3: { nama: "Audrey Visiona Saputri", dibayar: 195000 },
+  4: { nama: "Bianca Camelia Kenzieta", dibayar: 230000 },
   5: { nama: "Brayden Vincetius Jonathan", dibayar: 140000 },
   6: { nama: "Clarissa Aurelia", dibayar: 110000 },
   7: { nama: "Darius Bonardy", dibayar: 85000 },
@@ -23,7 +23,7 @@ const dataKas = {
   18: { nama: "Katarina Felixia Tantora", dibayar: 125000 },
   19: { nama: "Kenneth Immanuel Pateh", dibayar: 65000 },
   20: { nama: "Kenzie Aryasatya Kresna", dibayar: 230000 },
-  21: { nama: "Luisa Novely Immanuel Sianipar", dibayar: 145000 },
+  21: { nama: "Luisa Novely Immanuel Sianipar", dibayar: 230000 },
   22: { nama: "Maria Sarisha Ozara Kenszasza", dibayar: 230000 },
   23: { nama: "Marvel Athala Bernardus", dibayar: 120000 },
   24: { nama: "Netanya Zipiya Ginting", dibayar: 120000 },
@@ -31,7 +31,7 @@ const dataKas = {
   26: { nama: "Noel Ghabriel Alexandro Mentang", dibayar: 230000 },
   27: { nama: "Petrus Eduardus Sutanto", dibayar: 135000 },
   28: { nama: "Raden Gregorius Nicky Evan Subagio", dibayar: 150000 },
-  29: { nama: "Stanislaus Marvel Londar", dibayar: 220000 },
+  29: { nama: "Stanislaus Marvel Londar", dibayar: 230000 },
   30: { nama: "Stefano Jozeph Lantu", dibayar: 20000 },
   31: { nama: "Varaya Abigail Christy", dibayar: 65000 },
 };
