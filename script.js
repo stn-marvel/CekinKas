@@ -25,7 +25,7 @@ const dataKas = {
   20: { nama: "Kenzie Aryasatya Kresna", dibayar: 230000 },
   21: { nama: "Luisa Novely Immanuel Sianipar", dibayar: 230000 },
   22: { nama: "Maria Sarisha Ozara Kenszasza", dibayar: 230000 },
-  23: { nama: "Marvel Athala Bernardus", dibayar: 120000 },
+  23: { nama: "Marvel Athala Bernardus", dibayar: 150000 },
   24: { nama: "Netanya Zipiya Ginting", dibayar: 120000 },
   25: { nama: "Nilsen Hizkia Soleman Bolang", dibayar: 120000 },
   26: { nama: "Noel Ghabriel Alexandro Mentang", dibayar: 230000 },
