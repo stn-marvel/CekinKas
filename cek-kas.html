@@ -1,31 +1,98 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cek Pembayaran Kas</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cek Iuran</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    
-    <h1>UNDER MAINTENANCE</h1>
-    <h3>Terjadi Penundaan Rilis Versi 1.5 CekinKas</h3>
-    <p>Jangan panik ya, CekinKas untuk sementara sedang mengalami <strong>Maintenance atau Perbaikan</strong> dan akan kembali online pada <strong>19.00 WIB, 27 Mei 2025 sampai 23.00 WIB, 28 Mei 2025</strong>.</p>
+  <main>
 
-    <h5>JIKA INGIN MELIHAT WEB (VERSI LAMA) AKSES LINK DI BAWAH</h5>
-    <p>Web versi lama mungkin memiliki beberapa kesalahan dalam data. Perlu diingatkan bahwa beberapa <strong>error</strong> dapat terjadi.</p>
-    <a href="https://marfreelance.github.io/CekinKas/disabled.html">Klik Di Sini</a>
-    
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            text-decoration: none;
-            scroll-behavior: smooth;
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-    
-}
-    </style>
+    <header class="header" id="navbar">
+      <div class="nav-logo">
+        <a href="#" class="logo" >
+          Cekin<span>Kas</span>
+        </a>
+        <p><strong>By Bendahara 9F</strong></p>
+      </div>
+      
+      <nav class="navbar">
+        <a href="#landing">Home</a>
+        <a href="#cek-iuran">Cek Iuran</a>
+        <a href="#data-kas">Data Kas</a>
+      </nav>
+      <i class="bx bx-menu" id="menu-icon"></i>
+    </header>
+
+    <section class="landing" id="landing">
+
+      <h1><span>Duitnya</span> udah sampai mana nih?</h1>
+      <div class="landing-options">
+        <a href="#cek-iuran" class="landing-btn">Cek Iuran</a>
+        <a href="#data-kas" class="landing-btn">Data Kas</a>
+      </div>
+
+    </section>
+
+    <section class="cek-iuran" id="cek-iuran">
+      <h2 class="heading">Cek <span>Iuran</span></h2>
+
+      <div class="cek-box">
+        <p>Masukkan nomor absen.</p>
+        <div class="input-container">
+          <input type="number" id="absen" min="1" max="31" value="0" />
+          <button onclick="cekIuran()">Submit</button>
+        </div>
+        <div id="output">
+          <i id="icon-info"></i> Tekan bagian angka untuk mengatur nomor absen. Jangan lupa tekan submit ya.
+        </div>
+      </div>
+    </section>
+
+    <section class="data-kas" id="data-kas">
+      <h2 class="heading">Data <span>Kas</span></h2>
+
+      <div class="selector">
+        <label for="pilihan-diagram">Pilih:</label>
+        <select id="pilihan-diagram" onchange="updateChart()">
+          <option value="total">Kedua Semester</option>
+          <option value="semester1">Semester 1</option>
+          
+        </select>
+      </div>
+
+      <canvas id="chart-lunas" width="300" height="300"></canvas>
+      <script src="main.js"></script>
+
+      <div class="selector">
+        <label for="pilihan-kas">Pilih:</label>
+        <select id="pilihan-kas" onchange="updateKas()">
+          <option value="iuran">Jumlah Kas dari Iuran</option>
+          <option value="total">Jumlah Kas Keseluruhan</option>
+        </select>
+      </div>
+
+      <div id="jumlah-kas">Jumlah kas akan tampil di sini</div>
+    </section>
+
+    <footer id="footer">
+      <div class="footer-logo">
+        <a href="#" id="logo" >
+          Cekin<span>Kas</span>
+        </a>
+        <p><strong>By Bendahara 9F</strong></p>
+      </div>
+
+      <p>Website ini merupakan properti digital milik <span class="kelas">kelas 9F</span> bersama.</p>
+      <p>Jika ada kesalahan data, silakan hubungi bendahara kelas.</p>
+      
+    </footer>
+  </main>
+  
+  
 </body>
 </html>
