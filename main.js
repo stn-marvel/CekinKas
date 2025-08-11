@@ -23,21 +23,21 @@ function cekIuran() {
     return;
   }
   const bayar = siswaData.Bayar;
-  const lunas1 = bayar >= 110000;
-  const lunas2 = bayar >= 230000;
-  let ket = '';
-  if (lunas2) ket = 'Mantap! Lunas semua';
-  else if (lunas1) ket = 'Lunas semester 1';
-  else ket = 'Belum lunas semester 1';
-  const sisa = 230000 - bayar;
-  const persen = Math.min(100, Math.round((bayar / 230000) * 100));
-  output.innerHTML = `
-    <p><strong>Nama:</strong> ${siswaData.Nama}</p>
-    <p><strong>Jumlah yang telah dibayar:</strong> Rp${bayar.toLocaleString('id-ID')}</p>
-    <p><strong>Sisa yang harus dibayar:</strong> Rp${sisa.toLocaleString('id-ID')}</p>
-    <p><strong>Persentase lunas:</strong> ${persen}%</p>
-    <p><strong>Keterangan:</strong> ${ket}</p>
-  `;
+const lunas = bayar >= 100000;
+const lunas1 = bayar >= 50000;
+let ket = '';
+if (lunas1 && !lunas) ket = 'Wih, dikit lagi lunas';
+else if (lunas) ket = 'Lunas semester 1';
+else ket = 'Belum lunas';
+const sisa = 100000 - bayar;
+const persen = Math.min(100, Math.round((bayar / 100000) * 100));
+output.innerHTML = `
+  <p><strong>Nama:</strong> ${siswaData.Nama}</p>
+  <p><strong>Jumlah yang telah dibayar:</strong> Rp${bayar.toLocaleString('id-ID')}</p>
+  <p><strong>Sisa yang harus dibayar:</strong> Rp${sisa.toLocaleString('id-ID')}</p>
+  <p><strong>Persentase lunas:</strong> ${persen}%</p>
+  <p><strong>Keterangan:</strong> ${ket}</p>
+`;;
 }
 
 let chart;
@@ -84,7 +84,7 @@ function updateChart() {
 function updateKas() {
   const pilihan = document.getElementById('pilihan-kas').value;
   const totalIuran = siswa.reduce((sum, s) => sum + s.Bayar, 0);
-  const kasTotal = 1277000 + totalIuran; // Contoh nilai kas lain, bisa diganti sesuai kebutuhan
+  const kasTotal = totalIuran - 494000; // Contoh nilai kas lain, bisa diganti sesuai kebutuhan
 
   let kas = 0;
   if (pilihan === 'iuran') {
