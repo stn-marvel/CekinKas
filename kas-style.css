@@ -101,7 +101,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(https://github.com/stn-marvel/CekinKas/blob/main/bg-image.png);
+    background-image: url(https://raw.githubusercontent.com/stn-marvel/CekinKas/main/bg-image.png);
      background-size: cover; 
     background-position: center;
    background-repeat: no-repeat;
@@ -357,4 +357,5 @@ footer p {
     
     
 }
+
 
